@@ -1,6 +1,8 @@
 # tiny react router
 
-Very small (30 lines of es6) and basic router for react. It just does the very basics and is small enough for me to understand whats going on.  
+Very small (30 lines of es6) and basic router for react. 
+
+It just does the very basics and is small enough for me to understand whats going on.  
 
 You probably want to use [react-router](https://www.npmjs.com/package/react-router).
 
