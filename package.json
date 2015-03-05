@@ -1,0 +1,24 @@
+{
+  "name": "tiny-react-router",
+  "version": "1.0.0",
+  "description": "Very small and basic router for React",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha -R nyan -w --check-leaks"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/asbjornenge/tiny-react-router.git"
+  },
+  "keywords": [
+    "react",
+    "router",
+    "react-component"
+  ],
+  "author": "Asbjorn Enge <asbjorn@hanafjedle.net>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/asbjornenge/tiny-react-router/issues"
+  },
+  "homepage": "https://github.com/asbjornenge/tiny-react-router"
+}
