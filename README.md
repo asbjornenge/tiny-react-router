@@ -5,24 +5,28 @@ You probably want to use [react-router](https://www.npmjs.com/package/react-rout
 
 ## Install
 
-    npm install --save tiny-react-router
+```sh
+npm install --save tiny-react-router
+```
 
 ## Use
 
-    import React  from 'react'
-    import Router from 'tiny-react-router'
-    import Home   from './screens/Home'
-    import Blog   from './screens/Blog'
- 
-    let routes = {
-        '/'         : Home,
-        '/blog/:id' : Blog
-    }
- 
-    React.render(
-        <Router routes={routes} />,
-        document.body
-    )
+```js
+import React  from 'react'
+import Router from 'tiny-react-router'
+import Home   from './screens/Home'
+import Blog   from './screens/Blog'
+
+let routes = {
+    '/'         : Home,
+    '/blog/:id' : Blog
+}
+
+React.render(
+    <Router routes={routes} />,
+    document.body
+)
+```
 
 enjoy.
 
