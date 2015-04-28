@@ -28,5 +28,15 @@ React.render(
 )
 ```
 
+## Changelog
+
+### 1.0.1
+
+* Using window.addEventListener instead of stealing window.onhashchange
+
+### 1.0.0
+
+* Initial release :tada:
+
 enjoy.
 

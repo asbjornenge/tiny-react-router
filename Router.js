@@ -25,7 +25,7 @@ export default class Router extends React.Component {
         return <Handler {...this.props} {...props} />
     }
     componentDidMount() {
-        window.onhashchange = () => this.setState({ url : window.location.hash.slice(1) })
+        window.addEventListener('hashchange', () => this.setState({ url : window.location.hash.slice(1) }))
     }
 }
 

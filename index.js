@@ -70,9 +70,9 @@ var Router = (function (_React$Component) {
             value: function componentDidMount() {
                 var _this = this;
 
-                window.onhashchange = function () {
+                window.addEventListener("hashchange", function () {
                     return _this.setState({ url: window.location.hash.slice(1) });
-                };
+                });
             },
             writable: true,
             configurable: true
