@@ -30,6 +30,11 @@ React.render(
 
 ## Changelog
 
+### 1.0.2
+
+* Removing event listener on componentWillUnmount and keeping track of mounted state
+* Only trying to setState when mounted
+
 ### 1.0.1
 
 * Using window.addEventListener instead of stealing window.onhashchange

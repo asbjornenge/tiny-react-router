@@ -24,8 +24,16 @@ export default class Router extends React.Component {
     createElement(Handler, props) {
         return <Handler {...this.props} {...props} />
     }
+    updateState() {
+        if (this._mounted) this.setState({ url : window.location.hash.slice(1) })
+    }
     componentDidMount() {
-        window.addEventListener('hashchange', () => this.setState({ url : window.location.hash.slice(1) }))
+        this._mounted = true
+        window.addEventListener('hashchange', this.updateState.bind(this))
+    }
+    componentWillUnmount() {
+        this._mounted = false
+        window.removeEventListener('hashchange', this.updateState.bind(this)) 
     }
 }
 

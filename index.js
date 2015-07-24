@@ -66,13 +66,25 @@ var Router = (function (_React$Component) {
             writable: true,
             configurable: true
         },
+        updateState: {
+            value: function updateState() {
+                if (this._mounted) this.setState({ url: window.location.hash.slice(1) });
+            },
+            writable: true,
+            configurable: true
+        },
         componentDidMount: {
             value: function componentDidMount() {
-                var _this = this;
-
-                window.addEventListener("hashchange", function () {
-                    return _this.setState({ url: window.location.hash.slice(1) });
-                });
+                this._mounted = true;
+                window.addEventListener("hashchange", this.updateState.bind(this));
+            },
+            writable: true,
+            configurable: true
+        },
+        componentWillUnmount: {
+            value: function componentWillUnmount() {
+                this._mounted = false;
+                window.removeEventListener("hashchange", this.updateState.bind(this));
             },
             writable: true,
             configurable: true
