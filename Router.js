@@ -1,5 +1,4 @@
 import React  from 'react'
-import assign from 'react/lib/Object.assign'
 import Route  from 'route-parser'
 
 export default class Router extends React.Component {

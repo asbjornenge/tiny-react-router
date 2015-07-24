@@ -14,8 +14,6 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 
 var React = _interopRequire(require("react"));
 
-var assign = _interopRequire(require("react/lib/Object.assign"));
-
 var Route = _interopRequire(require("route-parser"));
 
 var Router = (function (_React$Component) {
