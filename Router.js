@@ -2,20 +2,16 @@ import React  from 'react'
 import Route  from 'route-parser'
 
 export default class Router extends React.Component {
-    constructor(props) {
-        super(props)
-        let routes = Object.keys(this.props.routes).map((route) => {
-            return { route : new Route(route), handler : this.props.routes[route] }
-        })
-        this.state = { url : window.location.hash.slice(1), routes : routes }
-    }
     render() {
         return this.getComponent() 
     }
     getComponent() {
-        let url  = this.state.url == '' ? '/' : this.state.url
-        return this.state.routes.reduce((def, route) => {
-            let props = route.route.match(url)
+        let url = window.location.hash.slice(1)
+        let routes = Object.keys(this.props.routes).map((route) => {
+            return { route : new Route(route), handler : this.props.routes[route] }
+        })
+        return routes.reduce((def, route) => {
+            let props = route.route.match(url || '/')
             if (props) return this.createElement(route.handler, props)
             return def
         },<div>404 not found</div>)
@@ -24,7 +20,7 @@ export default class Router extends React.Component {
         return <Handler {...this.props} {...props} />
     }
     updateState() {
-        if (this._mounted) this.setState({ url : window.location.hash.slice(1) })
+        if (this._mounted) this.forceUpdate()
     }
     componentDidMount() {
         this._mounted = true
@@ -35,4 +31,3 @@ export default class Router extends React.Component {
         window.removeEventListener('hashchange', this.updateState.bind(this)) 
     }
 }
-
