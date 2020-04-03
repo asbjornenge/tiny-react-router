@@ -4,8 +4,6 @@
   "description": "Very small and basic router for React",
   "main": "index.js",
   "scripts": {
-    "test": "mocha -R nyan -w --check-leaks",
-    "build": "babel Router.js > index.js"
   },
   "repository": {
     "type": "git",

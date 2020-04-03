@@ -13,7 +13,7 @@ npm install --save tiny-react-router
 
 ```js
 import React  from 'react'
-import Router from 'tiny-react-router'
+import { Router } from 'tiny-react-router'
 import Home   from './screens/Home'
 import Blog   from './screens/Blog'
 
@@ -29,6 +29,12 @@ React.render(
 ```
 
 ## Changelog
+
+### 2.0.0
+
+* Major rewrite using ES6 features and no babel
+* Exporting `{ Router, nav, getPath }` 
+* No default export
 
 ### 1.0.2
 
