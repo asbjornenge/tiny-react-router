@@ -30,6 +30,10 @@ React.render(
 
 ## Changelog
 
+### 3.0.0
+
+* Using history API and location.pathname instead of location.hash
+
 ### 2.0.0
 
 * Major rewrite using ES6 features and no babel
